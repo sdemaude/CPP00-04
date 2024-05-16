@@ -6,12 +6,10 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 17:55:52 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/05/16 11:52:02 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/05/16 16:05:45 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
 #include "PhoneBook.hpp"
 
 std::string	safeinput()
@@ -20,25 +18,21 @@ std::string	safeinput()
 
 	if (std::cin.eof())
 		exit(0);
-	std::cin >> str;
+	std::getline(std::cin, str);
 	return (str);
 }
 
 int	safeinputInt()
 {
-	int	i;
+	int	i = -1;
+	std::stringstream	strs;
 
-	if (std::cin.eof())
-		exit(0);
-	std::cin >> i;
-	while (i < 0 || i > 7)
-	{
-		if (std::cin.eof())
-			exit(0);
-		std::cin >> i;
-	}
+	strs << safeinput();
+	strs >> i;
+
+	if (strs.fail() || !strs.eof() || i < 0 || i > 7)
+		return (-1);
 	return (i);
-
 }
 
 int	main()
@@ -46,6 +40,7 @@ int	main()
 	std::string str;
 	PhoneBook	dir;
 
+	int i = -1;
 	while (1)
 	{
 		std::cout << std::endl << "Type ADD to create a new contact, SEARCH to find an existing one or EXIT to quit : ";

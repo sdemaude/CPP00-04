@@ -6,12 +6,10 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 15:18:24 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/05/16 11:58:28 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/05/16 16:04:54 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iomanip>
-#include <iostream>
 #include "PhoneBook.hpp"
 
 int	safeinputInt();
@@ -23,17 +21,35 @@ void	PhoneBook::newEntry() {
 	index++;
 }
 
+std::string	resizeEntry(std::string str)
+{
+	if (str.length() > 10)
+	{
+		str.resize(9);
+		str.push_back('.');
+	}
+	return (str);
+}
+
 void	PhoneBook::displayEntry() {
 	int	i = 0;
+	std::string firstName;
+	std::string lastName;
+	std::string nickName;
 
 	while (i < 8)
 	{
-		std::cout << std::setw(10) << i << "|" << std::setw(10) << entry[i].firstName 
-			<< "|" << std::setw(10) << entry[i].lastName << "|" << std::setw(10) << entry[i].nickName << std::endl;
+		firstName = resizeEntry(entry[i].firstName);
+		lastName = resizeEntry(entry[i].lastName);
+		nickName = resizeEntry(entry[i].nickName);
+		std::cout << std::setw(10) << i
+			<< "|" << std::setw(10) << firstName 
+			<< "|" << std::setw(10) << lastName 
+			<< "|" << std::setw(10) << nickName << std::endl;
 		i++;
 	}
 	i = safeinputInt();
-	while (i < 0 || i > 7)
-		i = safeinputInt();
+	if (i < 0)
+		return ;
 	entry[i].displayContact();
 }

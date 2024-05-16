@@ -6,11 +6,10 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 13:45:15 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/05/16 11:36:26 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/05/16 16:04:31 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Contact.hpp"
 
 std::string	safeinput();

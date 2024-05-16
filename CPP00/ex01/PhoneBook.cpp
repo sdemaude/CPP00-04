@@ -6,12 +6,15 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 15:18:24 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/05/15 18:42:51 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/05/16 11:58:28 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iomanip>
 #include <iostream>
 #include "PhoneBook.hpp"
+
+int	safeinputInt();
 
 void	PhoneBook::newEntry() {
 	if (index > 7)
@@ -25,11 +28,12 @@ void	PhoneBook::displayEntry() {
 
 	while (i < 8)
 	{
-		std::cout << i << " " << entry[i].firstName << " " << entry[i].lastName << " " << entry[i].nickName << std::endl;
+		std::cout << std::setw(10) << i << "|" << std::setw(10) << entry[i].firstName 
+			<< "|" << std::setw(10) << entry[i].lastName << "|" << std::setw(10) << entry[i].nickName << std::endl;
 		i++;
 	}
-	std::cin >> i;
+	i = safeinputInt();
 	while (i < 0 || i > 7)
-		std::cin >> i;
+		i = safeinputInt();
 	entry[i].displayContact();
 }

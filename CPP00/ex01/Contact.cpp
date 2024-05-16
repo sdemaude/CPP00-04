@@ -6,24 +6,26 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 13:45:15 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/05/15 16:46:19 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/05/16 11:36:26 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Contact.hpp"
 
+std::string	safeinput();
+
 void	Contact::newContact() {
 	std::cout << "-- Create a new contact --" << std::endl << std::endl << "First Name : ";
-	std::cin >> firstName;
+	firstName = safeinput();
 	std::cout << "Last Name : ";
-	std::cin >> lastName;
+	lastName = safeinput();
 	std::cout << "Nickname : ";
-	std::cin >> nickName;
+	nickName = safeinput();
 	std::cout << "Phone Number : ";
-	std::cin >> phoneNumber;
+	phoneNumber = safeinput();
 	std::cout << "Darkest Secret : ";
-	std::cin >> darkestSecret;
+	darkestSecret = safeinput();
 	std::cout << std::endl << "-- All done ! --" << std::endl;
 }
 

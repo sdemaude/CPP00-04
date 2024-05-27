@@ -6,7 +6,7 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 15:42:33 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/05/27 12:43:22 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/05/27 12:48:36 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int	main()
 	Fixed const b(10);
 	Fixed const c(42.42f);
 	Fixed const d(b);
-	//copy constructor operator ^
 	
 	a = Fixed(1234.4321f);
 

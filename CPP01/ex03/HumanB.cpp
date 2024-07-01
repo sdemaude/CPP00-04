@@ -6,7 +6,7 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 13:13:34 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/05/20 14:13:49 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/07/01 13:58:49 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ void	HumanB::setWeapon(Weapon &type)
 
 void	HumanB::attack()
 {
-		std::cout << name << " attacks with their " << type->getType() << std::endl; 
+	std::cout << name << " attacks with their " << type->getType() << std::endl; 
 }

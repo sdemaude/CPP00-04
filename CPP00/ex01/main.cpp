@@ -6,15 +6,11 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 17:55:52 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/05/16 16:57:12 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/07/01 12:00:11 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
-#include <string>
-#include <iostream>
-#include <iomanip>
-#include <sstream>
 
 std::string	safeinput()
 {

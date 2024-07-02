@@ -6,11 +6,12 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 13:07:02 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/05/16 16:57:22 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/07/02 16:23:05 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
+#include <cstdlib>
 #include <string>
 #include <iostream>
 #include <iomanip>
@@ -18,7 +19,7 @@
 
 class PhoneBook {
 	private :
-		int		index = 0;
+		int		index;
 		Contact	entry[8];
 
 	public :

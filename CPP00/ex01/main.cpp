@@ -6,7 +6,7 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 17:55:52 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/07/01 12:00:11 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/07/02 16:19:41 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ std::string	safeinput()
 	std::string	str;
 
 	if (std::cin.eof())
-		exit(0);
+		exit (0);
 	std::getline(std::cin, str);
 	return (str);
 }
@@ -40,7 +40,6 @@ int	main()
 	std::string str;
 	PhoneBook	dir;
 
-	int i = -1;
 	while (1)
 	{
 		std::cout << std::endl << "Type ADD to create a new contact, SEARCH to find an existing one or EXIT to quit : ";

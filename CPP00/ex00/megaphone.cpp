@@ -6,7 +6,7 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 15:40:23 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/07/01 09:51:12 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/07/02 16:32:21 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,18 @@ char	*strupper(char *str)
 
 int	main(int argc, char **argv)
 {
-	if (argc > 1)
-		while (*++argv)
-			std::cout << strupper(*argv) << std::endl;
+	if (argc == 2)
+		std::cout << strupper(*++argv) << std::endl;
+	else if (argc > 2)
+	{
+		for (int i = 1; argv[i]; i++)
+		{
+			if (i < argc - 1)
+				std::cout << strupper(argv[i]) << " ";
+			else
+				std::cout << strupper(argv[i]) << std::endl;
+		}
+	}
 	else
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 	return (0);

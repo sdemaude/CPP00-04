@@ -6,13 +6,13 @@
 #    By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/13 16:52:25 by sdemaude          #+#    #+#              #
-#    Updated: 2024/05/15 13:02:54 by sdemaude         ###   ########.fr        #
+#    Updated: 2024/07/02 16:09:47 by sdemaude         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = megaphone
 CXX = c++
-CFLAGS = -Wall -Wextra -Werror -g -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -g -std=c++98
 OBJ = $(SRC:.cpp=.o)
 
 SRC = megaphone.cpp
@@ -20,7 +20,7 @@ SRC = megaphone.cpp
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	$(CXX) $(CFLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 clean :
 	rm -f *.o

@@ -6,7 +6,7 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 15:18:24 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/05/16 16:57:15 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/07/02 16:13:37 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int	safeinputInt();
 
-void	PhoneBook::newEntry() {
+void	PhoneBook::newEntry()
+{
 	if (index > 7)
 		index = 0;
 	entry[index].newContact();

@@ -6,17 +6,17 @@
 #    By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/13 16:52:25 by sdemaude          #+#    #+#              #
-#    Updated: 2024/07/02 16:42:07 by sdemaude         ###   ########.fr        #
+#    Updated: 2024/07/02 16:43:23 by sdemaude         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = cpp02_ex01 
+NAME = ClapTrap 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -g -std=c++98
 OBJ = $(SRC:.cpp=.o)
 
 SRC = main.cpp\
-      	Fixed.cpp
+      	ClapTrap.cpp
 
 all : $(NAME)
 

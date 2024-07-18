@@ -6,7 +6,7 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 15:03:45 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/07/02 16:53:03 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/07/18 16:12:18 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	main(int ac, char **av)
 	infile.open(av[1]);
 	if (!infile.is_open())
 		return (std::cout << "Invalid file input" << std::endl, 1);
-	std::getline(infile, tmp);
+	std::getline(infile, tmp, '\0');
 	infile.close();
 
 	std::string		newName = av[1];
@@ -37,18 +37,18 @@ int	main(int ac, char **av)
 
 	std::ofstream	outfile(newName.c_str());
 
-	int	index = 0;
-	while ((int)tmp.find(s1) != -1)
+	size_t	index = 0;
+	while (1)
 	{
 		index = tmp.find(s1, index);
-		if (index > (int)tmp.length())
+		if (index >= tmp.length())
 			break;
 		tmp.erase(index, s1.length());
 		tmp.insert(index, s2);
 
 		index += s2.length();
 	}
-	outfile << tmp << std::endl;
+	outfile << tmp;
 	outfile.close();
 
 	return (0);

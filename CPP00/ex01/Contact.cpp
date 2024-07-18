@@ -6,7 +6,7 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 13:45:15 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/05/16 16:57:18 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/07/18 14:51:55 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,28 @@ void	Contact::displayContact() {
 	std::cout << "Nickname : " << nickName << std::endl;
 	std::cout << "Phone Number : " << phoneNumber << std::endl;
 	std::cout << "Darkest Secret : " << darkestSecret << std::endl;
+}
+
+std::string	resizeEntry(std::string str)
+{
+	if (str.length() > 10)
+	{
+		str.resize(9);
+		str.push_back('.');
+	}
+	return (str);
+}
+
+void	Contact::displayEntry(int i) {
+	std::string firstName;
+	std::string lastName;
+	std::string nickName;
+
+	firstName = resizeEntry(this->firstName);
+	lastName = resizeEntry(this->lastName);
+	nickName = resizeEntry(this->nickName);
+	std::cout << std::setw(10) << i
+	<< "|" << std::setw(10) << firstName 
+	<< "|" << std::setw(10) << lastName 
+	<< "|" << std::setw(10) << nickName << std::endl;
 }

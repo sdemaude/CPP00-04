@@ -6,7 +6,7 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 11:41:43 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/05/20 12:02:55 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/07/18 15:20:24 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ int	main()
 	std::cout << std::endl;
 
 	std::cout << &str << std::endl;
-	std::cout << &stringPTR << std::endl;
+	std::cout << stringPTR << std::endl;
 	std::cout << &stringREF << std::endl;
 
 	std::cout << std::endl;
 
 	std::cout << str << std::endl;
-	std::cout << stringPTR << std::endl;
+	std::cout << *stringPTR << std::endl;
 	std::cout << stringREF << std::endl;
 }

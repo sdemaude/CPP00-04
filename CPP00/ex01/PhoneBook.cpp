@@ -6,7 +6,7 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 15:18:24 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/07/02 16:13:37 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/07/18 12:03:56 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,31 +22,13 @@ void	PhoneBook::newEntry()
 	index++;
 }
 
-std::string	resizeEntry(std::string str)
+void	PhoneBook::displayEntry()
 {
-	if (str.length() > 10)
-	{
-		str.resize(9);
-		str.push_back('.');
-	}
-	return (str);
-}
-
-void	PhoneBook::displayEntry() {
 	int	i = 0;
-	std::string firstName;
-	std::string lastName;
-	std::string nickName;
 
 	while (i < 8)
 	{
-		firstName = resizeEntry(entry[i].firstName);
-		lastName = resizeEntry(entry[i].lastName);
-		nickName = resizeEntry(entry[i].nickName);
-		std::cout << std::setw(10) << i
-			<< "|" << std::setw(10) << firstName 
-			<< "|" << std::setw(10) << lastName 
-			<< "|" << std::setw(10) << nickName << std::endl;
+		entry[i].displayEntry(i);
 		i++;
 	}
 	i = safeinputInt();

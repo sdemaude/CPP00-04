@@ -6,7 +6,7 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 12:51:39 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/05/20 14:53:15 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/07/18 15:28:36 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Weapon
 		std::string	type;
 
 	public :
-		Weapon(std::string type);
+							Weapon(const std::string &type);
+		void				setType(const std::string &type);
 		const std::string	&getType();
-		void	setType(std::string);
 };

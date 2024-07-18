@@ -6,7 +6,7 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 13:09:20 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/05/16 16:56:29 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/07/18 12:03:50 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ class Contact {
 	private :
 		std::string	phoneNumber;
 		std::string	darkestSecret;
-
-	public :
 		std::string	firstName;
 		std::string	lastName;
 		std::string	nickName;
 
+	public :
 		void	newContact();
 		void	displayContact();
+		void	displayEntry(int i);
 };

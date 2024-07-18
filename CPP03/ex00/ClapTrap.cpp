@@ -6,7 +6,7 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 16:53:40 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/06/13 15:25:56 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/07/18 18:23:37 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,30 +28,34 @@ ClapTrap::~ClapTrap()
 
 void	ClapTrap::attack(const std::string& target)
 {
-	if (this->EnergyPoint > 0 or this->HitPoint > 0)
+	if (this->EnergyPoint > 0 and this->HitPoint > 0)
 	{
 		this->EnergyPoint--;
-	//	target.takeDamage(this->AttackDamage);
-		std::cout << "ClapTrap" << Name << "attacks" << target << ", causing" << AttackDamage << "points of damage!" << std::endl;
+		std::cout << "ClapTrap " << Name << " attacks " << target << ", causing " << AttackDamage << " points of damage !" << std::endl;
 	}
 	else
-		std::cout << "No energy or hit points left, could not attack" << target << "!" << std::endl;
+		std::cout << "No energy or hit points left, could not attack " << target << " !" << std::endl;
 }
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
-
-	//??target->HitPoint -= this->AttackDamage;
+	if (this->HitPoint > 0)
+	{
+		this->HitPoint -= amount;
+		std::cout << "ClapTrap " << Name << " lost " << amount << " hit point(s) !!" << std::endl;
+	}
+	else
+		std::cout << "ClapTrap " << Name << " is already dead, could not take damage !" << std::endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	if (this->EnergyPoint > 0 or this->HitPoint > 0)
+	if (this->EnergyPoint > 0 and this->HitPoint > 0)
 	{
 		this->EnergyPoint--;
 		this->HitPoint += amount;
-		std::cout << "ClapTrap" << Name << "repaired itself, it got" << amount << "hit points back!" << std::endl;
+		std::cout << "ClapTrap " << Name << " repaired itself, it got " << amount << " hit points back !" << std::endl;
 	}
 	else
-		std::cout << "No energy or hit points left, could not repaired itself!" << std::endl;
+		std::cout << "No energy or hit points left, could not repaire itself !" << std::endl;
 }

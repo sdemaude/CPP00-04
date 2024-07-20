@@ -6,13 +6,13 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 16:53:31 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/07/18 18:20:50 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/07/20 13:03:33 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-int	main(void)
+int	main()
 {
 	ClapTrap	fizz("Fizz");
 	ClapTrap	buzz("Buzz");

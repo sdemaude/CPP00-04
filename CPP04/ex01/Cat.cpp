@@ -6,7 +6,7 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 16:05:15 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/07/20 16:35:21 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/07/21 09:43:20 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void	Cat::makeSound() const
 Cat	&Cat::operator=(Cat const &other)
 {
 	this->type = other.type;
+	std::cout << "[Cat] Copy assignment operator called" << std::endl;
 
 	return (*this);
 }

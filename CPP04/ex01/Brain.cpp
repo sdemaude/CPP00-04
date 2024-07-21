@@ -6,7 +6,7 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 17:48:17 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/07/20 18:20:43 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/07/21 09:51:53 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,9 @@ Brain::Brain()
 	std::cout << "[Brain] Default constructor has been called" << std::endl;
 }
 
-Brain::Brain(std::string const &type) :	ideas(ideas)
+Brain::Brain(Brain const &other)
 {
-	std::cout << "[Brain] Type constructor has been called" << std::endl;
-}
-
-Brain::Brain(Brain const &other) : ideas(other.ideas)
-{
+	*this = other;
 	std::cout << "[Brain] Copy constructor has been called" << std::endl;
 }
 
@@ -36,7 +32,10 @@ Brain::~Brain()
 
 Brain	&Brain::operator=(Brain const &other)
 {
-	this->ideas = other.ideas;
+	this->ideas->clear();
+	for (int i = 0; i < S_ARRAY; i++)
+		this->ideas[i] = other.ideas[i];
+	std::cout << "[Brain] Copy assignment operator called" << std::endl;
 
 	return (*this);
 }

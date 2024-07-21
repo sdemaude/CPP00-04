@@ -6,7 +6,7 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 15:53:21 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/07/20 17:21:22 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/07/21 09:43:10 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ void	Animal::makeSound() const
 Animal	&Animal::operator=(Animal const &other)
 {
 	this->type = other.type;
+	std::cout << "[Animal] Copy assignment operator called" << std::endl;
 
 	return (*this);
 }

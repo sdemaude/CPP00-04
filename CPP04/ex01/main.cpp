@@ -6,7 +6,7 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 15:50:34 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/07/21 09:51:42 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/07/21 09:59:55 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	main()
 		animal_array[i]->makeSound();
 	std::cout << std::endl;
 	for (int i = 0; i < N_ANIMAL; i++)
-		delete animal_array[i];
+		delete animal_array[i]; 
 
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 10:08:23 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/07/21 11:57:55 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/07/22 13:42:12 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,28 +16,54 @@
 #include "Character.hpp"
 #include "MateriaSource.hpp"
 
-int main()
+void	learn(IMateriaSource *src)
 {
-	IMateriaSource* src = new MateriaSource();
+	AMateria	*ice = new Ice();
+	AMateria	*cure = new Cure();
 
-	src->learnMateria(new Ice());
-	src->learnMateria(new Cure());
+	src->learnMateria(ice);
+	src->learnMateria(cure);
 
-	ICharacter* me = new Character("me");
-	AMateria* tmp;
+	delete ice;
+	delete cure;
+}
 
-	tmp = src->createMateria("ice");
-	me->equip(tmp);
-	tmp = src->createMateria("cure");
-	me->equip(tmp);
+int	main(void)
+{
+	IMateriaSource	*src = new MateriaSource();
+	ICharacter		*me = new Character("me");
+	ICharacter		*bob = new Character("bob");
+	AMateria		*ice;
+	AMateria		*cure;
 
-	ICharacter* bob = new Character("bob");
+	std::cout << std::endl;
+	learn(src);
+	std::cout << std::endl;
+	ice = src->createMateria("ice");
+	cure = src->createMateria("cure");
+	std::cout << std::endl;
+	
+	me->equip(ice);
+	me->equip(cure);
+	std::cout << std::endl;
+
 	me->use(0, *bob);
 	me->use(1, *bob);
+	std::cout << std::endl;
+
+	me->unequip(0);
+	me->equip(cure);
+	std::cout << std::endl;
+
+	me->use(0, *bob);
+	me->use(1, *bob);
+	std::cout << std::endl;
 
 	delete bob;
 	delete me;
 	delete src;
+	delete ice;
+	delete cure;
 
-	return 0;
+	return (0);
 }

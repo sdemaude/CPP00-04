@@ -6,7 +6,7 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 10:09:13 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/07/21 11:47:50 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/07/22 11:01:28 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,10 @@ std::string const	&AMateria::getType() const
 	return (this->type);
 }
 
-//use ??
+void		AMateria::use(ICharacter &target)
+{
+	(void)target;
+}
 
 /**************/
 

@@ -6,7 +6,7 @@
 #    By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/13 16:52:25 by sdemaude          #+#    #+#              #
-#    Updated: 2024/07/21 11:43:16 by sdemaude         ###   ########.fr        #
+#    Updated: 2024/07/22 11:38:42 by sdemaude         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ SRC = main.cpp\
       AMateria.cpp\
       Ice.cpp\
       Cure.cpp\
-      Character.cpp
+      Character.cpp\
+	  MateriaSource.cpp
 
 all : $(NAME)
 

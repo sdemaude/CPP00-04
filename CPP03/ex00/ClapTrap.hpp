@@ -6,9 +6,12 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 16:53:36 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/07/20 13:45:00 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/07/24 14:44:56 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef CLAPTRAP_HPP
+#define CLAPTRAP_HPP
 
 #include <string>
 #include <iostream>
@@ -32,3 +35,5 @@ class ClapTrap {
 
 		ClapTrap &operator=(ClapTrap const &other);
 };
+
+#endif

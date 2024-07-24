@@ -6,7 +6,7 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 17:17:51 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/07/20 17:20:46 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/07/24 17:02:08 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 #include <string>
 #include <iostream>
 
-class WrongAnimal {
+class WrongAnimal
+{
 	protected:
 		std::string type;
 

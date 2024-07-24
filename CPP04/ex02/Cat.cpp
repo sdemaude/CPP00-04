@@ -6,24 +6,27 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 16:05:15 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/07/21 09:43:20 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/07/24 17:44:56 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat() :	Animal("Cat")
+Cat::Cat() :	Animal("Cat"),
+				brain(new Brain())
 {
 	std::cout << "[Cat] Default constructor has been called" << std::endl;
 }
 
-Cat::Cat(Cat const &other) : Animal(other)
+Cat::Cat(Cat const &other) :	Animal(other),
+								brain(new Brain(*other.brain))
 {
 	std::cout << "[Cat] Copy constructor has been called" << std::endl;
 }
 
 Cat::~Cat()
 {
+	delete this->brain;
 	std::cout << "[Cat] Destructor has been called" << std::endl;
 }
 

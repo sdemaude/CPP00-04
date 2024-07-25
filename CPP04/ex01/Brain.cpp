@@ -6,7 +6,7 @@
 /*   By: sdemaude <sdemaude@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 17:48:17 by sdemaude          #+#    #+#             */
-/*   Updated: 2024/07/21 09:51:53 by sdemaude         ###   ########.fr       */
+/*   Updated: 2024/07/25 11:32:34 by sdemaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ Brain::Brain()
 
 Brain::Brain(Brain const &other)
 {
-	*this = other;
 	std::cout << "[Brain] Copy constructor has been called" << std::endl;
+	*this = other;
 }
 
 Brain::~Brain()
